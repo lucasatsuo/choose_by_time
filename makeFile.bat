@@ -1,0 +1,1 @@
+pyinstaller -F run_by_time.py
