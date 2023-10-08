@@ -6,6 +6,7 @@ import pygame
 from sys import exit
 from time import time
 from os import system
+import subprocess
 from configparser import ConfigParser
 
 pygame.init()
@@ -96,8 +97,11 @@ if __name__=='__main__':
 
     if has_keyed:
         print(JUKEBOX_ART)
-        system(f"{config['jukebox']['FileName']}")
+        # system(f"{config['jukebox']['FileName']}")
+        subprocess.Popen(f"{config['jukebox']['FileName']}")
+        exit()
     else:
         print(PINBALL_ART)
-        system(f"{config['pinball']['FileName']}")
-
+        # system(f"{config['pinball']['FileName']}")
+        subprocess.Popen(f"{config['pinball']['FileName']}")
+        exit()
